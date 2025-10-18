@@ -155,9 +155,18 @@ section#productos {
   padding-top: 40px;         /* espacio opcional desde el borde superior */
 }
 
-/* Texto ANIMATOON */
 #contenido h2 {
   font-size: 4rem;
   color: #ffffff;
   margin: 0;
+}
+
+.imagenUno img{
+  position: absolute;
+  width: 285px;
+  height: 285px;
+  top: var(--top);
+  left: var(--left);
+  right: var(--right);
+  bottom: var(--bottom);
 }
