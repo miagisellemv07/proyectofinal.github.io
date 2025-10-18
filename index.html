@@ -5,29 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ANIMATOON</title>
   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/mediaquery.css">
 </head>
 <body>
 
-  <!-- Encabezado -->
   <header>
     <div id="imagenL">
       <img src="img/LOGOLISTO.png" alt=" ">
       <h1>ANIMATOON</h1>
     </div>
 
-    <nav>
-      <ul>
-        <li><a href="#">Principal</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
+ <nav>
+  <ul>
+    <li><a href="#home">Principal</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
   </header>
 
-  <!-- Sección principal -->
+  
   <section id="home">
-    <!-- 🌼 Manchita decorativa (puedes duplicar esta línea y cambiar valores) -->
+  
      <div class="manchita" style="--color:#f7a25e; --top:50px; --left:60px; "></div>
     <div class="manchita" style="--color:#FFE680; --top:120px; --left:180px;"></div>
     <div class="manchita" style="--color:#cc94ec; --top:50px; --left:380px; "></div>
@@ -63,27 +63,53 @@
     </div>
   </section>
   <!-- Segunda sección -->
-  <section id="productos">
-    <div id="contenido">
-      <h2>PRODUCTOS</h2>
-       <div class="imagenUno" style="--top:150px; --left:50px; "> 
-      <img src="img/L1.png" alt=" ">
-    </div>
-    <div class="imagenUno" style="--top:150px; --left:400px; "> 
-      <img src="img/L2.png" alt=" ">
-    </div>
-    <div class="imagenUno" style="--top:150px; --left:2400px; "> 
-      <img src="img/L3.png" alt=" ">
-    </div>
+<section id="productos">
+  <div id="contenido">
+    <h2>PRODUCTOS</h2>
+  </div>
 
-    <!--
-    <div class="imagenUno" style="--top:150px; --left:200px; "> 
-      <img src="img/L4.png" alt=" ">
-    </div>
-    -->
+  <div class="productos-grid">
+    
+    <article class="producto">
+      <img src="img/L1.png" alt="Lienzo mini">
+      <h3>Lienzo mini</h3>
+      <p class="meta">
+        Medidas: 15×15cm<br>
+        precio: $40.56
+      </p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
 
-    </div>
-  </section>
+    <article class="producto">
+      <img src="img/L2.png" alt="Lienzo pequeño">
+      <h3>Lienzo pequeño</h3>
+      <p class="meta">
+        Medidas: 30×30cm<br>
+        precio: $60.89
+      </p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+
+    <article class="producto">
+      <img src="img/L3.png" alt="Lienzo mediano">
+      <h3>Lienzo mediano</h3>
+      <p class="meta">
+        Medidas: 50×50cm<br>
+        precio: $80.99
+      </p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+    <article class="producto">
+      <img src="img/L4.png" alt="Lienzo grande">
+      <h3>Lienzo grande</h3>
+      <p class="meta">
+        Medidas: 80×80cm<br>
+        precio: $100.67
+      </p>
+      <button class="btn-comprar">Comprar</button>
+    </article>
+  </div>
+</section>
 
 </body>
 </html>

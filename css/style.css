@@ -1,16 +1,13 @@
-/* Reset general */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fuente base */
 body {
   font-family: "Playfair Display", serif;
 }
 
-/* Encabezado rosa */
 header {
   background-color: #FF9FCF;
   width: 100%;
@@ -23,7 +20,6 @@ header {
   z-index: 1000;
 }
 
-/* Logo y título */
 #imagenL {
   display: flex;
   align-items: center;
@@ -41,7 +37,6 @@ header h1 {
   font-size: 2rem;
 }
 
-/* Navegación */
 header nav ul {
   display: flex;
   list-style: none;
@@ -54,7 +49,6 @@ header nav a {
   font-size: 1.2rem;
 }
 
-/* Sección principal */
 section#home {
   position: relative;
   min-height: 100vh;
@@ -65,17 +59,15 @@ section#home {
   overflow: hidden;
 }
 
-/* Contenido dentro de la sección */
 #content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   color: #000000;
-  z-index: 2; /* sobre las manchitas */
+  z-index: 2;
 }
 
-/* 🌼 Manchita base (usa variables CSS) */
 .manchita {
   position: absolute;
   background: var(--color);
@@ -91,27 +83,23 @@ section#home {
   z-index: 1;
 }
 
-/* Animación de movimiento suave */
 @keyframes flotar {
-  0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(15px, -10px) scale(1.05); }
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(15px, -10px) scale(1.05); }
   100% { transform: translate(0, 0) scale(1); }
 }
 
-/* Título grande */
 #content h2 {
   font-size: 4rem;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-/* Subtítulo */
 #p1 {
   font-size: 2rem;
   color: rgba(225, 103, 230, 0.952);
 }
 
-/* Botón */
 button {
   border-radius: 50px;
   height: 40px;
@@ -124,49 +112,103 @@ button {
   cursor: pointer;
 }
 
-/* Contenedor del botón */
 #botones {
   padding-top: 20px;
 }
 
-/* Imagen derecha */
+#botones::before {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+#botones:hover {
+  transform: translateY(-1px);
+}
+
 #imagen img {
   width: 500px;
   height: 500px;
 }
+
 section#productos {
   position: relative;
   min-height: 100vh;
   background-color: #9CCFFF;
-  padding: 0 50px; /* sin padding arriba para que el texto quede pegado */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 60px 50px 80px;
+  display: block;
   overflow: hidden;
 }
 
-/* Contenedor del texto de la segunda sección */
 #contenido {
   width: 100%;
-  display: flex;
-  justify-content: center;  /* centra horizontalmente */
-  align-items: flex-start;   /* alinea arriba */
   text-align: center;
-  padding-top: 40px;         /* espacio opcional desde el borde superior */
+  margin-bottom: 24px;
 }
 
 #contenido h2 {
-  font-size: 4rem;
-  color: #ffffff;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 0 rgba(255,255,255,0.25);
   margin: 0;
 }
 
-.imagenUno img{
-  position: absolute;
+.productos-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 48px;
+  align-items: start;
+}
+
+.producto {
+  text-align: center;
+}
+
+.producto img {
   width: 285px;
   height: 285px;
-  top: var(--top);
-  left: var(--left);
-  right: var(--right);
-  bottom: var(--bottom);
+}
+
+.producto h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0b0b0b;
+  margin: 6px 0 6px;
+}
+
+.producto .meta {
+  font-size: .9rem;
+  color: #0b0b0b;
+  opacity: .9;
+  line-height: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.btn-comprar {
+  border: none;
+  padding: 10px 0;
+  width: 140px;
+  text-align: center;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255,103,230,.95) 0%, rgba(255,186,222,1) 100%);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(255,255,255,.6);
+  display: block;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease;
+}
+
+.btn-comprar::before {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.btn-comprar:hover {
+  transform: translateY(-1px);
 }
